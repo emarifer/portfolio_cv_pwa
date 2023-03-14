@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Portfolio + CV + PWA</title>
+    <link rel="icon" href="/portfolio_cv_pwa/favicon-256.png">
+    <link rel="stylesheet" href="/portfolio_cv_pwa/tailwind_output.css">
+    
+    
+    
+    
+    <link rel="manifest" href="/portfolio_cv_pwa/manifest.json">
+
+    <script>
+      // register ServiceWorker
+      window.onload = () => {
+        "use strict";
+
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register(
+            "/portfolio_cv_pwa/service_worker.js",
+            { scope: "/portfolio_cv_pwa/" }
+          );
+        }
+      };
+    </script>
+  
+<link rel="preload" href="/portfolio_cv_pwa/portfolio_cv_pwa_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/portfolio_cv_pwa/portfolio_cv_pwa.js"></head>
+  <body>
+
+<script type="module">import init from '/portfolio_cv_pwa/portfolio_cv_pwa.js';init('/portfolio_cv_pwa/portfolio_cv_pwa_bg.wasm');</script></body></html>

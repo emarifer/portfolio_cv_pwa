@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global styles */
+
+@font-face {
+  font-family: "Kanit";
+  font-weight: normal;
+  src: url(fonts/Kanit-Regular.ttf) format("truetype");
+}
+
+@layer base {
+  body {
+    @apply bg-primary p-5 text-cyan-50 font-kanit;
+  }
+}
+
+@layer components {
+  .active-route {
+    border-bottom: 3px solid blueviolet;
+    transition: border-bottom 0.5s ease-in-out;
+  }
+
+  .tab {
+    @apply whitespace-nowrap text-center w-full px-4 py-1 border-b-2;
+    @apply hover:bg-slate-700 focus:border-sky-500 focus:bg-slate-700 md:border-l-2 md:border-b-0 md:h-full md:text-left;
+  }
+
+  .fadeIn {
+    animation: 0.75s fadeIn forwards;
+  }
+
+  .fadeOut {
+    animation: 0.75s fadeOut forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-20px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+    to {
+      transform: translate(-20px, 0);
+      opacity: 0;
+    }
+  }
+}

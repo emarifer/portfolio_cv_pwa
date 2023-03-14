@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+    <title>Portfolio + CV + PWA</title>
+    <link data-trunk rel="icon" href="public/icon/favicon-256.png" />
+    <link data-trunk rel="css" href="public/tailwind_output.css" />
+    <link data-trunk rel="copy-dir" href="public/fonts" />
+    <link data-trunk rel="copy-dir" href="public/img" />
+    <link data-trunk rel="copy-file" href="service_worker.js" />
+    <link data-trunk rel="copy-file" href="manifest.json" />
+    <link rel="manifest" href="/portfolio_cv_pwa/manifest.json" />
+
+    <script>
+      // register ServiceWorker
+      window.onload = () => {
+        "use strict";
+
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register(
+            "/portfolio_cv_pwa/service_worker.js",
+            { scope: "/portfolio_cv_pwa/" }
+          );
+        }
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

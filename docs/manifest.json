@@ -1,0 +1,17 @@
+{
+  "name": "Portfolio + CV + PWA",
+  "short_name": "CV + PWA",
+  "icons": [
+    {
+      "src": "/portfolio_cv_pwa/favicon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-US",
+  "scope": "/portfolio_cv_pwa/",
+  "start_url": "/portfolio_cv_pwa/",
+  "display": "standalone",
+  "background_color": "#9333ea",
+  "theme_color": "#9333ea"
+}
